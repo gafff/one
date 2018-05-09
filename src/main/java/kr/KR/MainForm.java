@@ -50,3 +50,21 @@ public class MainForm extends JFrame {
 		contentPane.setLayout(null);
 		contentPane.setBorder(titledBorder);
 		JPanel Panel1 = new JPanel();
+                /**
+		 * указывает координаты верхней левой вершины окна, а также его ширину и высоту.
+		 */
+		Panel1.setBounds(50,15,500,650);
+		JPanel Panel2 = new JPanel();
+		this.setIconImage(icon1.getImage());
+		/**
+		 * Отключение автоматичского размещения компонентов на панели
+		 */
+		Panel2.setLayout(null);
+		/**
+		 * указывает координаты верхней левой вершины окна, а также его ширину и высоту.
+		 */
+		Panel2.setBounds(5,15,650,650);
+		/**
+		 * Задание шрифта и размера надписей для кнопок
+		 */
+		Font font = new Font("Times New Roman", Font.PLAIN, 25);
