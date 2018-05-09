@@ -32,3 +32,35 @@ public class MathForm implements ActionListener {
 	 * Событие для кнопки "Рассчитать", присутствует обработка ошибок.
 	 */
 	public void actionPerformed(ActionEvent e)  {
+		try {
+		/**
+		 * Создание объекта прослушивающего нажатие кнопок
+		 */
+        Object src = e.getSource();
+        /**
+    	 *Условие  для прослушиваемой кнопки
+    	 */
+        if (src == ComponentForm.btnNewButton){
+        	/**
+        	 * Ссчитывание введенно максимальной мощности
+        	 */
+			Float k1=Float.parseFloat((ComponentForm.TxtBox1.getText( )));
+			/**
+			 * Считывание заранее заданного напряжения сети
+			 */
+			Float r1=Float.parseFloat((ComponentForm.TxtBox2.getText( )));
+			/**
+			 * Вычисление напряжения в сети с помощью специальной функции расчёта
+			 */
+			result=Calculation.sums(k1, r1);
+			/**
+			 * Вввод результатов на экранную форму
+			 */
+			ComponentForm.label_3.setText(" Результат: " +  String.format("%.2f",result )+" Ампер ");
+        } 
+	}
+		catch(Exception ex) {
+			JOptionPane.showMessageDialog(new JFrame(),ex.getMessage(), "ОШИБКА",JOptionPane.ERROR_MESSAGE);
+    	}
+	}	
+}
