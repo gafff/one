@@ -119,6 +119,7 @@ public class CalculationTests {
 			   * итоговая проверка, tests и result2 сравниваются на равенство.
 			   */
 		assertEquals((float)24,Calculation.sums(k6,r6));
+	}
 		/**
 		* Окончание теста расчёта номинала в электрической цепи для производственных помещений.
 		*/
